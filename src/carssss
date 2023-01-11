@@ -1,0 +1,24 @@
+SELECT * FROM cars;
+
+SELECT brand, model, price from cars;
+SELECT  count(*) from cars;
+SELECT  brand FROM cars WHERE brand='Hyundai';
+SELECT  brand,  color from cars where color='Blue' or color='Red';
+SELECT * FROM cars where year_of_issue between '2000' and '2010';
+SELECT   count(*)  from cars where brand='Chevrolet';
+SELECT brand, count(*) from cars group by brand order by brand='Chevrolet';--gruppaga bolot.
+SELECT brand, avg(year_of_issue) from cars group by brand;
+SELECT * from cars where brand='Audi' or brand='Toyota' or brand='Kia' or brand='Ford';
+SELECT * from cars where model like 'T%';
+SELECT * from cars where model ilike '%e';
+SELECT * from cars where brand like '_____';
+SELECT sum(price),brand from cars where brand='Mercedes-Benz' group by brand order by brand;
+SELECT min(price) from cars;
+SELECT max(price) from cars;
+SELECT * from cars where cars.brand <>' Toyota';
+SELECT *from cars where year_of_issue between '';
+SELECT * from cars where year_of_issue between '1995' and '2005';
+SELECT * from cars where color like 'Blue';
+SELECT * FROM cars ORDER BY price DESC LIMIT 10;
+SELECT * FROM cars ORDER BY year_of_issue DESC LIMIT 5 AND 10;
+SELECT color,COUNT(color)FROM cars GROUP BY color ORDER BY 2 DESC LIMIT 1;
